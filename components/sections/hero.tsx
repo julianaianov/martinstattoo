@@ -5,24 +5,30 @@ import { Button } from '@/components/ui/button'
 
 export function HeroSection() {
   return (
-    <section className="relative flex min-h-screen items-center justify-start overflow-hidden pt-16">
-      <div className="pointer-events-none absolute inset-0 -z-10">
+    <section className="relative isolate flex min-h-[100dvh] min-h-screen items-center justify-start overflow-hidden pt-16">
+      {/*
+        isolate + z-0/z-10: evita que z-index negativo jogue o vídeo atrás de <main> no Safari iOS.
+        playsInline + muted + poster: autoplay e primeiro frame em mobile.
+      */}
+      <div className="pointer-events-none absolute inset-0 z-0">
         <video
-          className="absolute inset-0 h-full w-full min-h-full min-w-full scale-105 object-cover object-center"
+          className="absolute inset-0 h-full w-full object-cover object-center sm:scale-105"
           src="/terror.mp4"
+          poster="/images/realismo2.jpg"
           autoPlay
           muted
           loop
           playsInline
           preload="auto"
+          controls={false}
         >
           <source src="/terror.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-black/25 dark:bg-black/40" />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-transparent to-background/55" />
+        <div className="absolute inset-0 z-[1] bg-black/25 dark:bg-black/40" />
+        <div className="absolute inset-0 z-[1] bg-gradient-to-b from-background/30 via-transparent to-background/55" />
       </div>
 
-      <div className="w-full max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+      <div className="relative z-10 w-full max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
         <div className="w-full max-w-2xl text-left">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm">
             <span className="relative flex h-2 w-2">

@@ -33,6 +33,50 @@ export const COURSE_GRADUAL_BODY =
 
 export const COURSE_INSTRUCTOR_KICKER = 'QUEM SOU EU:'
 
+/** Texto da bio — mesma fonte na página inicial e em /curso. */
+export type InstructorBioSegment = { text: string; bold?: boolean }
+
+export const COURSE_INSTRUCTOR_BIO_PARAGRAPHS: readonly (readonly InstructorBioSegment[])[] = [
+  [
+    { text: 'MEU NOME É ' },
+    { text: 'WANDERSON MARTINS', bold: true },
+    { text: ', SOU TATUADOR HÁ MAIS DE UMA DÉCADA E ' },
+    { text: 'ESPECIALISTA EM REALISMO', bold: true },
+    { text: ', TANTO PRETO E CINZA QUANTO COLORIDO.' },
+  ],
+  [
+    { text: 'COMECEI NA ' },
+    { text: 'TATUAGEM', bold: true },
+    {
+      text: ' AOS 24 ANOS, ENQUANTO CONCILIAVA A PROFISSÃO COM O TRABALHO DE FLORISTA. A FALTA DE INFORMAÇÃO DIFICULTOU MEU INÍCIO, MAS UM ',
+    },
+    { text: 'WORKSHOP', bold: true },
+    { text: ' COM UM RENOMADO ' },
+    { text: 'TATUADOR', bold: true },
+    { text: ' MUDOU MINHA TRAJETÓRIA.' },
+  ],
+  [
+    { text: 'COM O TEMPO, ' },
+    { text: 'CONQUISTEI PATROCÍNIOS', bold: true },
+    { text: ' DE GRANDES MARCAS, VIAJEI PELO BRASIL PARTICIPANDO DE COMPETIÇÕES E ' },
+    { text: 'ACUMULEI RECONHECIMENTO', bold: true },
+    { text: ' E PRÊMIOS.' },
+  ],
+  [
+    { text: 'HOJE, COM A ' },
+    { text: 'CARREIRA CONSOLIDADA', bold: true },
+    { text: ', ALÉM DE TATUADOR, TAMBÉM SOU INSTRUTOR, E DEDICO-ME A ' },
+    { text: 'ENSINAR NOVOS PROFISSIONAIS', bold: true },
+    { text: ', COMPARTILHANDO O ' },
+    { text: 'CONHECIMENTO', bold: true },
+    { text: ' QUE CONSIDERO MEU MAIOR ' },
+    { text: 'INVESTIMENTO', bold: true },
+    { text: ' E QUE FEZ TODA A DIFERENÇA NA MINHA TRAJETÓRIA.' },
+  ],
+]
+
+export const COURSE_INSTRUCTOR_IMAGE_ALT = 'Wanderson Martins — tatuador e instrutor'
+
 export const COURSE_INVESTMENT_KICKER = 'INVESTIMENTO'
 
 export const COURSE_INVESTMENT_PARAGRAPHS = [

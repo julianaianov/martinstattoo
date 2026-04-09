@@ -1,12 +1,13 @@
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { HeroSection } from '@/components/sections/hero'
-import { AboutSection } from '@/components/sections/about'
+import { CursoInstructorSection } from '@/components/curso-instructor-section'
 import { AwardsSection } from '@/components/sections/awards'
-import { CoursePreviewSection } from '@/components/sections/course-preview'
 import { StylesPreviewSection } from '@/components/sections/styles-preview'
+import { TattooClientSection } from '@/components/sections/tattoo-client-section'
 import { CTASection } from '@/components/sections/cta'
 import { StudioLocationSection } from '@/components/sections/studio-location'
+import { CoursePreviewSection } from '@/components/sections/course-preview'
 
 export default function HomePage() {
   return (
@@ -14,12 +15,13 @@ export default function HomePage() {
       <Header />
       <main>
         <HeroSection />
-        <AboutSection />
+        <CursoInstructorSection imageFit="contain" />
         <AwardsSection />
-        <CoursePreviewSection />
+        <TattooClientSection />
         <StylesPreviewSection />
         <StudioLocationSection />
         <CTASection />
+        <CoursePreviewSection />
       </main>
       <Footer />
     </>

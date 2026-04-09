@@ -16,6 +16,8 @@ type CursoSplitSectionProps = {
   footer?: ReactNode
   className?: string
   visual?: CourseModuleVisual
+  /** `contain` = foto inteira visível (sem crop); `cover` preenche a área (padrão). */
+  imageFit?: 'cover' | 'contain'
 }
 
 export function CursoSplitSection({
@@ -30,6 +32,7 @@ export function CursoSplitSection({
   footer,
   className,
   visual = 'split',
+  imageFit = 'cover',
 }: CursoSplitSectionProps) {
   const textBlock =
     leftContent ??
@@ -98,6 +101,19 @@ export function CursoSplitSection({
           </div>
         </div>
       </div>
+    ) : imageFit === 'contain' ? (
+      <div className="relative flex min-h-[320px] w-full items-center justify-center bg-neutral-950 px-4 py-8 sm:px-6 sm:py-10 lg:min-h-0 lg:items-stretch lg:px-8 lg:py-12">
+        <div className="relative aspect-square w-full max-w-md overflow-hidden rounded-2xl border border-white/10 bg-neutral-900 shadow-lg lg:my-auto lg:max-h-[min(100%,36rem)] lg:max-w-[min(100%,28rem)]">
+          <Image
+            src={imageSrc}
+            alt={imageAlt}
+            fill
+            className="object-contain object-center"
+            sizes="(max-width: 1024px) 100vw, 28rem"
+            priority={false}
+          />
+        </div>
+      </div>
     ) : (
       <div className="relative min-h-[280px] w-full bg-neutral-900 lg:min-h-[min(100%,32rem)]">
         <Image
@@ -117,7 +133,7 @@ export function CursoSplitSection({
 
   return (
     <section className={cn('bg-black text-white', className)}>
-      <div className="grid lg:grid-cols-2">
+      <div className="grid lg:grid-cols-2 lg:items-stretch">
         <div className="order-1 flex flex-col justify-center px-6 py-12 sm:px-10 lg:px-14 xl:px-20">
           {textBlock}
           {footer ? <div className="mt-10">{footer}</div> : null}
