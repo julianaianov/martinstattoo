@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { Instagram, MessageCircle, MapPin, Clock } from 'lucide-react'
-import { StudioMapEmbed } from '@/components/studio-map-embed'
 import {
   GOOGLE_MAPS_OPEN_URL,
   STUDIO_ADDRESS_CEP,
@@ -131,17 +130,6 @@ export function Footer() {
                 <span>Seg - Sáb: 10h às 20h</span>
               </li>
             </ul>
-          </div>
-        </div>
-
-        <div className="mt-12 border-t border-border pt-10">
-          <h3 className="text-center font-semibold md:text-left">Onde atendemos</h3>
-          <p className="mx-auto mt-2 max-w-2xl text-center text-sm text-muted-foreground md:mx-0 md:text-left">
-            O tatuador atende na <strong className="text-foreground">{STUDIO_NAME}</strong> — {STUDIO_ADDRESS_STREET},{' '}
-            {STUDIO_ADDRESS_CITY}, CEP {STUDIO_ADDRESS_CEP}.
-          </p>
-          <div className="mx-auto mt-6 max-w-4xl md:mx-0">
-            <StudioMapEmbed />
           </div>
         </div>
 

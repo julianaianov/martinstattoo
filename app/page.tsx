@@ -6,6 +6,7 @@ import { AwardsSection } from '@/components/sections/awards'
 import { CoursePreviewSection } from '@/components/sections/course-preview'
 import { StylesPreviewSection } from '@/components/sections/styles-preview'
 import { CTASection } from '@/components/sections/cta'
+import { StudioLocationSection } from '@/components/sections/studio-location'
 
 export default function HomePage() {
   return (
@@ -17,6 +18,7 @@ export default function HomePage() {
         <AwardsSection />
         <CoursePreviewSection />
         <StylesPreviewSection />
+        <StudioLocationSection />
         <CTASection />
       </main>
       <Footer />

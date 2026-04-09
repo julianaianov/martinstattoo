@@ -74,8 +74,8 @@ export const COURSE_MODULES_DETAILED: readonly CourseModuleDetail[] = [
       'TRAÇOS PRECISOS',
       'PALETA DE CORES',
     ],
-    imageSrc: 'https://images.unsplash.com/photo-1590246814889-31cc365d1611?w=1600&q=80',
-    imageAlt: 'Tatuador aplicando traços em pele',
+    imageSrc: '/images/fine-line.jpg',
+    imageAlt: 'Fine line — traços precisos e fundamentos de desenho',
     visual: 'split',
   },
   {
@@ -88,8 +88,8 @@ export const COURSE_MODULES_DETAILED: readonly CourseModuleDetail[] = [
       'HIGIENE E BIOSSEGURANÇA NA TATUAGEM',
       'CONFIGURAÇÃO E CALIBRAÇÃO DE EQUIPAMENTOS',
     ],
-    imageSrc: 'https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=1600&q=80',
-    imageAlt: 'Materiais e equipamentos de tatuagem',
+    imageSrc: '/images/tribal.jpg',
+    imageAlt: 'Tatuagem tribal — linha, precisão e técnica',
     visual: 'split',
   },
   {
@@ -103,8 +103,8 @@ export const COURSE_MODULES_DETAILED: readonly CourseModuleDetail[] = [
       'APLICAÇÃO DE SOMBREAMENTO E DEGRADÊ',
       'COMO EVITAR ERROS COMUNS',
     ],
-    imageSrc: 'https://images.unsplash.com/photo-1565058379802-bdec93f3d157?w=1200&q=80',
-    imageAlt: 'Referência visual de estudo e prática',
+    imageSrc: '/images/comic-colorido.jpeg',
+    imageAlt: 'Tatuagem colorida estilo comic — prática e estudo',
     visual: 'circle-study',
   },
   {
@@ -118,8 +118,8 @@ export const COURSE_MODULES_DETAILED: readonly CourseModuleDetail[] = [
       'ATENDIMENTO AO CLIENTE',
       'FINALIZAÇÃO DA TATUAGEM',
     ],
-    imageSrc: 'https://images.unsplash.com/photo-1568515387631-8b650bbcdb90?w=1600&q=80',
-    imageAlt: 'Tatuagem em pele real em andamento',
+    imageSrc: '/images/realismo.jpeg',
+    imageAlt: 'Realismo em pele — tatuagem profissional',
     visual: 'split',
   },
   {
@@ -132,8 +132,8 @@ export const COURSE_MODULES_DETAILED: readonly CourseModuleDetail[] = [
       'COMO DIVULGAR SEU TRABALHO',
       'CONSTRUÇÃO DE UM PORTFÓLIO',
     ],
-    imageSrc: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=1600&q=80',
-    imageAlt: 'Divulgação e presença digital',
+    imageSrc: '/images/premio-multi-campeao.png',
+    imageAlt: 'Reconhecimento em competições — mercado e portfólio',
     visual: 'split',
   },
 ] as const
@@ -175,17 +175,13 @@ export const COURSE_TURMA_OPTIONS = [
   { id: 'lista-espera', label: 'Lista de espera / avise-me' },
 ] as const
 
-/** Imagens das seções editoriais (Unsplash — substitua por fotos do estúdio em /public quando quiser). */
-export const COURSE_IMAGE_HERO =
-  'https://images.unsplash.com/photo-1598371621830-6142734192b4?w=1800&q=80'
+/** Imagens das seções do curso — todas em /public/images. */
+export const COURSE_IMAGE_HERO = '/images/realismo2.jpg'
 
-export const COURSE_IMAGE_ABOUT = COURSE_IMAGE_HERO
+export const COURSE_IMAGE_ABOUT = '/images/animais.jpg'
 
-export const COURSE_IMAGE_INSTRUCTOR =
-  'https://images.unsplash.com/photo-1542727313-4c761cbecb13?w=1800&q=80'
+export const COURSE_IMAGE_INSTRUCTOR = '/images/artist.jpeg'
 
-export const COURSE_IMAGE_GRADUAL =
-  'https://images.unsplash.com/photo-1590246814889-31cc365d1611?w=1800&q=80'
+export const COURSE_IMAGE_GRADUAL = '/images/old_scholl.jpg'
 
-export const COURSE_IMAGE_INVESTMENT =
-  'https://images.unsplash.com/photo-1568515387631-8b650bbcdb90?w=1800&q=80'
+export const COURSE_IMAGE_INVESTMENT = '/images/pet.jpg'

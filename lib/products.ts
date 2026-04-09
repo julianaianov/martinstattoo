@@ -61,13 +61,14 @@ export const TATTOO_STYLES = [
     id: 'realismo',
     name: 'Realismo',
     description:
-      'Reprodução fiel de imagens reais, como retratos, animais e paisagens, com alto nível de detalhamento.',
+      'Variação do realismo com foco em profundidade, texturas e sombreamento avançado.',
     image: '/images/realismo.jpeg',
   },
   {
     id: 'realismo-2',
     name: 'Realismo 2',
-    description: 'Variação do realismo com foco em profundidade, texturas e sombreamento avançado.',
+    description:
+      'Reprodução fiel de imagens reais, como retratos, animais e paisagens, com alto nível de detalhamento.',
     image: '/images/realismo2.jpg',
   },
   {
@@ -75,7 +76,7 @@ export const TATTOO_STYLES = [
     name: 'Religioso',
     description:
       'Trabalhos com simbologia da fé e significado pessoal, com acabamento detalhado e composição harmoniosa.',
-    image: '/images/religioso.png',
+    image: '/images/religioso.PNG',
   },
   {
     id: 'tribal',

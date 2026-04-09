@@ -1,19 +1,25 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight, Calendar, MessageCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+
+const CTA_BACKGROUND_SRC = '/images/religioso.PNG'
 
 export function CTASection() {
   return (
     <section className="border-t border-border bg-card py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="relative overflow-hidden rounded-2xl border border-border bg-background p-8 md:p-12 lg:p-16">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1542727365-19732a80dcfd?auto=format&fit=crop&w=1920&q=80')",
-            }}
-          />
+          <div className="absolute inset-0">
+            <Image
+              src={CTA_BACKGROUND_SRC}
+              alt=""
+              fill
+              className="object-cover object-center"
+              sizes="(max-width: 1280px) 100vw, 1280px"
+              priority={false}
+            />
+          </div>
           <div className="absolute inset-0 bg-background/85" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-accent/15 via-background/20 to-background/70" />
           
